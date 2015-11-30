@@ -24,7 +24,7 @@ typedef vector<vll> vvll;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 
-const int MAX_VALUE = 100007;
+const int MAX_VALUE = 1000007;
 bool prime[MAX_VALUE];
 
 int main() {
