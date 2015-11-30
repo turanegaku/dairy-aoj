@@ -28,21 +28,18 @@ const int MAX_VALUE = 100007;
 bool prime[MAX_VALUE];
 
 int main() {
-  vi primes;
   FOR(i, 2, MAX_VALUE){
     if(prime[i]) continue;
-    primes.push_back(i);
     for(int j = i * 2; j<MAX_VALUE; j+=i)
       prime[j]=true;
   }
 
   int n;
   while(cin >> n) {
-    REP(i, primes.size()){
-      if(primes[i]-1 >= n) {
-        cout << i << endl;
-        break;
-      }
+    int cnt = 0;
+    FOR(i, 2, n + 1){
+      if (!prime[i]) cnt++;
     }
+    cout << cnt << endl;
   }
 }
